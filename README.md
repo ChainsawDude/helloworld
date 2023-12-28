@@ -6,15 +6,29 @@ a simple example
 ```mermaid
 flowchart TB
 
-d(Josh)
-m(Julia)
-k0(Hunter)
-k1(Atlee)
-
-subgraph parents
-    d<-->m
+subgraph hunter's computer
+subgraph opperating system - windows
+ed(editor - vscode)
+end
 end
 
-parents-->k0
-parents-->k1
+subgraph languages
+python
+c++
+markdown
+mermaid
+end
+
+subgraph repository - github
+files-->languages
+end
+
+subgraph execution environment
+subgraph opperating system - linux
+int(intrerpreter - python3)
+end
+end
+
+ed-->files
+files--->int
 ```
